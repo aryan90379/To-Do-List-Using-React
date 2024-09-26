@@ -1,0 +1,46 @@
+/* Navbar.css */
+.navbar {
+    position: relative;
+  }
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
+  /* Menu container */
+  .nav-links2 {
+    overflow: hidden; /* Hide overflow to create the sliding effect */
+    transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); /* Transition for sliding */
+    height: 0px; /* Start with max-height of 0 */
+  }
+  
+  .nav-links2.open {
+ height: 40px;
+    
+  }
+  
+  /* Optional: Add styles to show/hide the menu on small screens */
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none; /* Hide hamburger icon on larger screens */
+    }
+    .nav-links1 {
+      display: flex; /* Show nav links by default on larger screens */
+    }
+    .nav-links2{
+        display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links1 {
+      display: none;
+      justify-content: end;
+    }
+  }
+  
